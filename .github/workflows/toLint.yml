@@ -1,7 +1,6 @@
 name: toLint
 on:
-  push:
-    branches: [ main ]
+  - push
 jobs:
   my-job:
     runs-on: ubuntu-latest 
