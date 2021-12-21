@@ -6,6 +6,7 @@ const greatestCommonDivisor = (numberOne, numberTwo) => {
     }
     result -= 1;
   }
+  return result;
 };
 
 export default greatestCommonDivisor;
