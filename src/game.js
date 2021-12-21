@@ -12,7 +12,8 @@ const game = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   let counter = 0;
-  while (counter < 3) {
+  const answersToWin = 3;
+  while (counter < answersToWin) {
     const integerFromOneToHundred = randomInteger(1, 100);
     console.log('Question: ' + integerFromOneToHundred);
 
