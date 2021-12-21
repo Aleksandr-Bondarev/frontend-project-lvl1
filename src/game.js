@@ -15,7 +15,7 @@ const game = () => {
   const answersToWin = 3;
   while (counter < answersToWin) {
     const integerFromOneToHundred = randomInteger(1, 100);
-    console.log('Question: ' + integerFromOneToHundred);
+    console.log(`Question: ${integerFromOneToHundred}`);
 
     const answer = readlineSync.question('Your answer: ');
 
@@ -26,20 +26,16 @@ const game = () => {
       counter += 1;
     } else {
       console.log(
-        "'" +
-          answer +
-          "'" +
-          ' is wrong answer ;(. Correct answer was ' +
-          "'" +
-          correctAnswer +
-          "'."
+        `'${answer}'`
+          + ' is wrong answer ;(. Correct answer was '
+          + `'${correctAnswer}'.`,
       );
-      console.log("Let's try again, " + name + '!');
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
-  if ((counter = 3)) {
-    console.log('Congratulations, ' + name + '!');
+  if (counter === answersToWin) {
+    console.log(`Congratulations, ${name}!`);
   }
 };
 
