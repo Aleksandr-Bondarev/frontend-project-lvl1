@@ -6,3 +6,5 @@
 
 
 [![toLint](https://github.com/Aleksandr-Bondarev/frontend-project-lvl1/actions/workflows/toLint.yml/badge.svg)](https://github.com/Aleksandr-Bondarev/frontend-project-lvl1/actions/workflows/toLint.yml)
+
+https://asciinema.org/a/6x9xXUy16ZjgmL2GTPr7Mix6f
