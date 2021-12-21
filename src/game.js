@@ -1,11 +1,11 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
-import randomInteger from "./randomInteger.js";
+import randomInteger from './randomInteger.js';
 
 const game = () => {
-  console.log("Welcome to the Brain Games!");
+  console.log('Welcome to the Brain Games!');
 
-  const name = readlineSync.question("May I have your name? ");
+  const name = readlineSync.question('May I have your name? ');
 
   console.log(`Hello, ${name}!`);
 
@@ -14,32 +14,31 @@ const game = () => {
   let counter = 0;
   while (counter < 3) {
     const integerFromOneToHundred = randomInteger(1, 100);
-    console.log("Question: " + integerFromOneToHundred);
+    console.log('Question: ' + integerFromOneToHundred);
 
-    const answer = readlineSync.question("Your answer: ");
+    const answer = readlineSync.question('Your answer: ');
 
-    let correctAnswer;
-    correctAnswer = integerFromOneToHundred % 2 === 0 ? "yes" : "no";
+    const correctAnswer = integerFromOneToHundred % 2 === 0 ? 'yes' : 'no';
 
     if (correctAnswer === answer) {
-      console.log("Correct!");
+      console.log('Correct!');
       counter += 1;
     } else {
       console.log(
         "'" +
           answer +
           "'" +
-          " is wrong answer ;(. Correct answer was " +
+          ' is wrong answer ;(. Correct answer was ' +
           "'" +
           correctAnswer +
           "'."
       );
-      console.log("Let's try again, " + name + "!");
+      console.log("Let's try again, " + name + '!');
       return;
     }
   }
   if ((counter = 3)) {
-    console.log("Congratulations, " + name + "!");
+    console.log('Congratulations, ' + name + '!');
   }
 };
 
