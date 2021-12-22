@@ -29,7 +29,7 @@ const calculations = () => {
     const secondIntegerFromOneToHundred = randomInteger(1, 100);
 
     console.log(
-      `Question: ${integerFromOneToHundred}${operator}${secondIntegerFromOneToHundred}`,
+      `Question: ${integerFromOneToHundred} ${operator} ${secondIntegerFromOneToHundred}`,
     );
 
     const answer = readlineSync.question('Your answer: ');
