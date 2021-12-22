@@ -21,7 +21,7 @@ const isEvenGame = () => {
 
     const correctAnswer = integerFromOneToHundred % 2 === 0 ? 'yes' : 'no';
 
-    if (correctAnswer === answer) {
+    if (String(correctAnswer) === answer) {
       console.log('Correct!');
       counter += 1;
     } else {
