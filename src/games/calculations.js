@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import randomInteger from './randomInteger.js';
+import randomInteger from '../randomInteger.js';
 
 const calculations = () => {
   console.log('Welcome to the Brain Games!');

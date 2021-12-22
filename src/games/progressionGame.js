@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import randomInteger from './randomInteger.js';
+import randomInteger from '../randomInteger.js';
 
 const progressionGame = () => {
   console.log('Welcome to the Brain Games!');
@@ -27,28 +27,7 @@ const progressionGame = () => {
     coll[indexOfMissedInteger] = '..';
 
     console.log(
-      `Question: ${
-        coll[0]
-      } ${
-        coll[1]
-      } ${
-        coll[2]
-      } ${
-        coll[3]
-      } ${
-        coll[4]
-      } ${
-        coll[5]
-      } ${
-        coll[6]
-      } ${
-        coll[7]
-      } ${
-        coll[8]
-      } ${
-        coll[9]
-      } ${
-        coll[10]}`,
+      `Question: ${coll[0]} ${coll[1]} ${coll[2]} ${coll[3]} ${coll[4]} ${coll[5]} ${coll[6]} ${coll[7]} ${coll[8]} ${coll[9]} ${coll[10]}`,
     );
 
     const userAnswer = readlineSync.question('Your answer: ');

@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import isPrime from './isPrimeFunction.js';
+import isPrime from '../isPrimeFunction.js';
 
-import randomInteger from './randomInteger.js';
+import randomInteger from '../randomInteger.js';
 
 const isPrimeGame = () => {
   console.log('Welcome to the Brain Games!');

@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-import randomInteger from './randomInteger.js';
+import randomInteger from '../randomInteger.js';
 
-const game = () => {
+const isEvenGame = () => {
   console.log('Welcome to the Brain Games!');
 
   const name = readlineSync.question('May I have your name? ');
@@ -39,4 +39,4 @@ const game = () => {
   }
 };
 
-export default game;
+export default isEvenGame;

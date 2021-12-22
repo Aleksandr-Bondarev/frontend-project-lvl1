@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-import randomInteger from './randomInteger.js';
+import randomInteger from '../randomInteger.js';
 
-import greatestCommonDivisor from './gcdFunction.js';
+import greatestCommonDivisor from '../gcdFunction.js';
 
 const gcdGame = () => {
   console.log('Welcome to the Brain Games!');
