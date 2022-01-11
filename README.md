@@ -6,6 +6,8 @@
 
 [![toLint](https://github.com/Aleksandr-Bondarev/frontend-project-lvl1/actions/workflows/toLint.yml/badge.svg)](https://github.com/Aleksandr-Bondarev/frontend-project-lvl1/actions/workflows/toLint.yml)
 
+Welcome to the Brain-Games! (console game)
+
 How to install Brain-Games and play the game brain-even:
 
 [![asciicast](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH.svg)](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH)
@@ -18,9 +20,9 @@ Playing the game brain-gcd:
 
 [![asciicast](https://asciinema.org/a/mPSz5WrQwu23zs9bmPbmbO2Wf.svg)](https://asciinema.org/a/mPSz5WrQwu23zs9bmPbmbO2Wf);
 
-brain-progression:
+Playing the game brain-progression:
 
-[![asciicast](https://asciinema.org/a/TRZFHxSRaGLFFUshLopSMPtwv.svg)](https://asciinema.org/a/TRZFHxSRaGLFFUshLopSMPtwv);
+[![asciicast](https://asciinema.org/a/NNoZXBr64a9xd5vtSkr0BmCe0.svg)](https://asciinema.org/a/NNoZXBr64a9xd5vtSkr0BmCe0);
 
 brain-prime:
 
