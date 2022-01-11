@@ -24,6 +24,6 @@ Playing the game brain-progression:
 
 [![asciicast](https://asciinema.org/a/NNoZXBr64a9xd5vtSkr0BmCe0.svg)](https://asciinema.org/a/NNoZXBr64a9xd5vtSkr0BmCe0);
 
-brain-prime:
+Playind the game brain-prime:
 
-[![asciicast](https://asciinema.org/a/dfBxAe1C8CbV7WVqTPjpfkwC7.svg)](https://asciinema.org/a/dfBxAe1C8CbV7WVqTPjpfkwC7);
+[![asciicast](https://asciinema.org/a/i7vrREOVa8ca0p8vfSp2v14Od.svg)](https://asciinema.org/a/i7vrREOVa8ca0p8vfSp2v14Od);
