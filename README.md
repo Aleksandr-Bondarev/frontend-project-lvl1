@@ -8,15 +8,15 @@
 
 How to install Brain-Games and play the game brain-even:
 
-[![asciicast](https://https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH.svg)](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH)
+[![asciicast](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH.svg)](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH)
 
 Playind the game brain-calc:
 
 [![asciicast](https://asciinema.org/a/rOo6IwnyHopE0irylnu9fKYZb.svg)](https://asciinema.org/a/rOo6IwnyHopE0irylnu9fKYZb)
 
-brain-gcd:
+Playing the game brain-gcd:
 
-[![asciicast](https://asciinema.org/a/e0MCchvrUs7Lprki26zPuSUHG.svg)](https://asciinema.org/a/e0MCchvrUs7Lprki26zPuSUHG);
+[![asciicast](https://asciinema.org/a/mPSz5WrQwu23zs9bmPbmbO2Wf.svg)](https://asciinema.org/a/mPSz5WrQwu23zs9bmPbmbO2Wf);
 
 brain-progression:
 
