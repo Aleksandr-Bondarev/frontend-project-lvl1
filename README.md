@@ -6,9 +6,9 @@
 
 [![toLint](https://github.com/Aleksandr-Bondarev/frontend-project-lvl1/actions/workflows/toLint.yml/badge.svg)](https://github.com/Aleksandr-Bondarev/frontend-project-lvl1/actions/workflows/toLint.yml)
 
-brain-even:
+How to install Brain-Games and play the game brain-even:
 
-[![asciicast](https://asciinema.org/a/6x9xXUy16ZjgmL2GTPr7Mix6f.svg)](https://asciinema.org/a/6x9xXUy16ZjgmL2GTPr7Mix6f)
+[![asciicast](https://https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH.svg)](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH)
 
 brain-calc:
 
