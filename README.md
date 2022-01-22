@@ -10,20 +10,20 @@ Welcome to the Brain-Games! (console game)
 
 How to install Brain-Games and play the game brain-even:
 
-[![asciicast](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH.svg)](https://asciinema.org/a/1wAx46Abn4LBxKP1RiYJkEYrH)
+[![asciicast](https://asciinema.org/a/NFE0VPuRdkkG97HGw2OmvSZQe.svg)](https://asciinema.org/a/NFE0VPuRdkkG97HGw2OmvSZQe)
 
 Playind the game brain-calc:
 
-[![asciicast](https://asciinema.org/a/rOo6IwnyHopE0irylnu9fKYZb.svg)](https://asciinema.org/a/rOo6IwnyHopE0irylnu9fKYZb)
+[![asciicast](https://asciinema.org/a/CigKH3Is8ii2Ews0HQi58PNyu.svg)](https://asciinema.org/a/CigKH3Is8ii2Ews0HQi58PNyu)
 
 Playing the game brain-gcd:
 
-[![asciicast](https://asciinema.org/a/mPSz5WrQwu23zs9bmPbmbO2Wf.svg)](https://asciinema.org/a/mPSz5WrQwu23zs9bmPbmbO2Wf);
+[![asciicast](https://asciinema.org/a/jz74UumJiJwFxVfxwSjkh9zbG.svg)](https://asciinema.org/a/jz74UumJiJwFxVfxwSjkh9zbG);
 
 Playing the game brain-progression:
 
-[![asciicast](https://asciinema.org/a/NNoZXBr64a9xd5vtSkr0BmCe0.svg)](https://asciinema.org/a/NNoZXBr64a9xd5vtSkr0BmCe0);
+[![asciicast](https://asciinema.org/a/qf6KsaMnFDRK5yU52MA8YGHe7.svg)](https://asciinema.org/a/qf6KsaMnFDRK5yU52MA8YGHe7);
 
 Playind the game brain-prime:
 
-[![asciicast](https://asciinema.org/a/i7vrREOVa8ca0p8vfSp2v14Od.svg)](https://asciinema.org/a/i7vrREOVa8ca0p8vfSp2v14Od);
+[![asciicast](https://asciinema.org/a/75wz42LGlnNTaMLOwEkbVB1Bh.svg)](https://asciinema.org/a/75wz42LGlnNTaMLOwEkbVB1Bh);
