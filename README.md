@@ -10,7 +10,7 @@ Welcome to the Brain-Games! (console game)
 
 How to install Brain-Games and play the game brain-even:
 
-[![asciicast](https://asciinema.org/a/NFE0VPuRdkkG97HGw2OmvSZQe.svg)](https://asciinema.org/a/NFE0VPuRdkkG97HGw2OmvSZQe)
+[![asciicast](https://asciinema.org/a/507827.svg)](https://asciinema.org/a/507827)
 
 Playind the game brain-calc:
 
