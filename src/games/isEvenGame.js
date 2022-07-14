@@ -4,8 +4,7 @@ import greetAndDescribe from '../greetAndDescribe.js';
 import handleWinOrLose from '../handleWinOrLose.js';
 
 const isEvenGame = () => {
-  const gameDescripton =
-    'Answer "yes" if the number is even, otherwise answer "no".';
+  const gameDescripton = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const name = greetAndDescribe(gameDescripton);
 
@@ -30,7 +29,7 @@ const isEvenGame = () => {
       userAnswer,
       name,
       counter,
-      answersToWin
+      answersToWin,
     );
 
     if (!youAreWinnig) return;

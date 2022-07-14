@@ -3,13 +3,13 @@ const handleWinOrLose = (
   userAnswer,
   userName,
   answersCount,
-  answersToWin
+  answersToWin,
 ) => {
   if (correctAnswer !== userAnswer) {
     console.log(
-      `'${userAnswer}'` +
-        ' is wrong answer ;(. Correct answer was ' +
-        `'${correctAnswer}'.`
+      `'${userAnswer}'`
+        + ' is wrong answer ;(. Correct answer was '
+        + `'${correctAnswer}'.`,
     );
     console.log(`Let's try again, ${userName}!`);
     return false;

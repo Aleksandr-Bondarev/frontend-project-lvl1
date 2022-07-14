@@ -17,7 +17,7 @@ const progressionGame = () => {
     const indexOfMissedInteger = randomInteger(1, 11);
     const numberOfProgressionElements = 10;
     const coll = [progressionBeginner];
-  
+
     for (let i = 0; i < numberOfProgressionElements; i += 1) {
       const newElement = coll[coll.length - 1] + progressionStep;
       coll.push(newElement);
@@ -35,16 +35,16 @@ const progressionGame = () => {
       console.log('Correct!');
       counter += 1;
     }
-  
+
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
       name,
       counter,
-      answersToWin
+      answersToWin,
     );
 
-    if (!youAreWinnig) return;  
+    if (!youAreWinnig) return;
   }
 };
 

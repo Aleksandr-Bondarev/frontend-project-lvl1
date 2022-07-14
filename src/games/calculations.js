@@ -26,7 +26,7 @@ const calculations = () => {
     const secondIntegerFromOneToHundred = randomInteger(1, 100);
 
     console.log(
-      `Question: ${integerFromOneToHundred} ${operator} ${secondIntegerFromOneToHundred}`
+      `Question: ${integerFromOneToHundred} ${operator} ${secondIntegerFromOneToHundred}`,
     );
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
@@ -47,13 +47,13 @@ const calculations = () => {
       console.log('Correct!');
       counter += 1;
     }
-  
+
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
       name,
       counter,
-      answersToWin
+      answersToWin,
     );
 
     if (!youAreWinnig) return;

@@ -25,10 +25,10 @@ const isPrimeGame = () => {
   while (counter < answersToWin) {
     const someInteger = randomInteger(1, 100);
     const correctAnswer = isPrime(someInteger) === true ? 'yes' : 'no';
-  
+
     console.log(`Question: ${someInteger}`);
     const userAnswer = readlineSync.question('Your answer: ');
-  
+
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
       counter += 1;
@@ -39,7 +39,7 @@ const isPrimeGame = () => {
       userAnswer,
       name,
       counter,
-      answersToWin
+      answersToWin,
     );
 
     if (!youAreWinnig) return;

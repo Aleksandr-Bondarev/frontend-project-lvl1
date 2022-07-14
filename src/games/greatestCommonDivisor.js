@@ -27,10 +27,10 @@ const gcdGame = () => {
     const secondIntegerFromOneToHundred = randomInteger(1, 100);
     const correctAnswer = greatestCommonDivisor(
       firstRandomInteger,
-      secondIntegerFromOneToHundred
+      secondIntegerFromOneToHundred,
     );
     console.log(
-      `Question: ${firstRandomInteger} ${secondIntegerFromOneToHundred}`
+      `Question: ${firstRandomInteger} ${secondIntegerFromOneToHundred}`,
     );
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
@@ -45,7 +45,7 @@ const gcdGame = () => {
       userAnswer,
       name,
       counter,
-      answersToWin
+      answersToWin,
     );
 
     if (!youAreWinnig) return;
