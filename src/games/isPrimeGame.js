@@ -1,7 +1,16 @@
 import readlineSync from 'readline-sync';
-import isPrime from '../isPrimeFunction.js';
-
 import randomInteger from '../randomInteger.js';
+
+const isPrime = (number) => {
+  if (number === 1) {
+    return 'no';
+  }
+  let divisor = number - 1;
+  while (number % divisor !== 0) {
+    divisor -= 1;
+  }
+  return divisor === 1 ? 'yes' : 'no';
+};
 
 const isPrimeGame = () => {
   console.log('Welcome to the Brain Games!');
