@@ -33,14 +33,15 @@ const calculations = () => {
 
     let correctAnswer;
 
-    if (operator === '*') {
-      correctAnswer = integerFromOneToHundred * secondIntegerFromOneToHundred;
-    }
-    if (operator === '-') {
-      correctAnswer = integerFromOneToHundred - secondIntegerFromOneToHundred;
-    }
-    if (operator === '+') {
-      correctAnswer = integerFromOneToHundred + secondIntegerFromOneToHundred;
+    switch (operator) {
+      case '*':
+        correctAnswer = integerFromOneToHundred * secondIntegerFromOneToHundred;
+        break;
+      case '-':
+        correctAnswer = integerFromOneToHundred - secondIntegerFromOneToHundred;
+        break;
+      default:
+        correctAnswer = integerFromOneToHundred + secondIntegerFromOneToHundred;
     }
 
     if (correctAnswer === userAnswer) {
