@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 
-const greetAndDescribe = (gameDescripton) => {
+const greetAndDescribe = (gameDescripton = false) => {
   console.log('Welcome to the Brain Games!');
 
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
 
-  console.log(gameDescripton);
+  if (gameDescripton) console.log(gameDescripton);
 
   return name;
 };
