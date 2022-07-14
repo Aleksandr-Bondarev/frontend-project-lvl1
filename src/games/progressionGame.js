@@ -26,7 +26,7 @@ const progressionGame = () => {
     coll[indexOfMissedInteger] = '..';
 
     console.log(
-      `Question: ${coll[0]} ${coll[1]} ${coll[2]} ${coll[3]} ${coll[4]} ${coll[5]} ${coll[6]} ${coll[7]} ${coll[8]} ${coll[9]} ${coll[10]}`,
+      `Question: ${coll.join(' ')}`,
     );
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
