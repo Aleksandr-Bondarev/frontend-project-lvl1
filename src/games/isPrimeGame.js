@@ -4,13 +4,14 @@ import greetAndDescribe from '../greetAndDescribe.js';
 import handleWinOrLose from '../handleWinOrLose.js';
 
 const isPrime = (number) => {
-  if (number === 1) {
-    return 'no';
+  if (number === 1 || number === 2) {
+    return true;
   }
-  let divisor = number - 1;
+  let divisor = Math.ceil(Math.sqrt(number));
   while (number % divisor !== 0) {
     divisor -= 1;
   }
+
   return divisor === 1;
 };
 
