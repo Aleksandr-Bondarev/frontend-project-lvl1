@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import randomInteger from '../randomInteger.js';
+import greetAndDescribe from '../greetAndDescribe.js';
 
 const isPrime = (number) => {
   if (number === 1) {
@@ -13,12 +14,9 @@ const isPrime = (number) => {
 };
 
 const isPrimeGame = () => {
-  console.log('Welcome to the Brain Games!');
+  const gameDescripton = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const name = greetAndDescribe(gameDescripton);
 
   const answersToWin = 3;
   let counter = 0;

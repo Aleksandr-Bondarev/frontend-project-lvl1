@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-
 import randomInteger from '../randomInteger.js';
+import greetAndDescribe from '../greetAndDescribe.js';
 
 const greatestCommonDivisor = (numberOne, numberTwo) => {
   let result = numberOne;
@@ -14,12 +14,9 @@ const greatestCommonDivisor = (numberOne, numberTwo) => {
 };
 
 const gcdGame = () => {
-  console.log('Welcome to the Brain Games!');
+  const gameDescripton = 'Find the greatest common divisor of given numbers.';
 
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-
-  console.log('Find the greatest common divisor of given numbers.');
+  const name = greetAndDescribe(gameDescripton);
 
   const answersToWin = 3;
   let counter = 0;

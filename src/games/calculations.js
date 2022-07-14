@@ -1,15 +1,11 @@
 import readlineSync from 'readline-sync';
-
 import randomInteger from '../randomInteger.js';
+import greetAndDescribe from '../greetAndDescribe.js';
 
 const calculations = () => {
-  console.log('Welcome to the Brain Games!');
+  const gameDescripton = 'What is the result of the expression?';
 
-  const name = readlineSync.question('May I have your name? ');
-
-  console.log(`Hello, ${name}!`);
-
-  console.log('What is the result of the expression?');
+  const name = greetAndDescribe(gameDescripton);
 
   let counter = 0;
   const answersToWin = 3;
