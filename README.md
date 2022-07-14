@@ -18,12 +18,12 @@ Playind the game brain-calc:
 
 Playing the game brain-gcd:
 
-[![asciicast](https://asciinema.org/a/jz74UumJiJwFxVfxwSjkh9zbG.svg)](https://asciinema.org/a/jz74UumJiJwFxVfxwSjkh9zbG);
+[![asciicast](https://asciinema.org/a/jz74UumJiJwFxVfxwSjkh9zbG.svg)](https://asciinema.org/a/jz74UumJiJwFxVfxwSjkh9zbG)
 
 Playing the game brain-progression:
 
-[![asciicast](https://asciinema.org/a/qf6KsaMnFDRK5yU52MA8YGHe7.svg)](https://asciinema.org/a/qf6KsaMnFDRK5yU52MA8YGHe7);
+[![asciicast](https://asciinema.org/a/qf6KsaMnFDRK5yU52MA8YGHe7.svg)](https://asciinema.org/a/qf6KsaMnFDRK5yU52MA8YGHe7)
 
 Playind the game brain-prime:
 
-[![asciicast](https://asciinema.org/a/75wz42LGlnNTaMLOwEkbVB1Bh.svg)](https://asciinema.org/a/75wz42LGlnNTaMLOwEkbVB1Bh);
+[![asciicast](https://asciinema.org/a/75wz42LGlnNTaMLOwEkbVB1Bh.svg)](https://asciinema.org/a/75wz42LGlnNTaMLOwEkbVB1Bh)
