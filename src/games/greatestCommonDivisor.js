@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import randomInteger from '../randomInteger.js';
 import greetAndDescribe from '../greetAndDescribe.js';
+import handleWinOrLose from '../handleWinOrLose.js';
 
 const greatestCommonDivisor = (numberOne, numberTwo) => {
   let result = numberOne;
@@ -20,33 +21,34 @@ const gcdGame = () => {
 
   const answersToWin = 3;
   let counter = 0;
+
   while (counter < answersToWin) {
     const firstRandomInteger = randomInteger(1, 100);
     const secondIntegerFromOneToHundred = randomInteger(1, 100);
     const correctAnswer = greatestCommonDivisor(
       firstRandomInteger,
-      secondIntegerFromOneToHundred,
+      secondIntegerFromOneToHundred
     );
     console.log(
-      `Question: ${firstRandomInteger} ${secondIntegerFromOneToHundred}`,
+      `Question: ${firstRandomInteger} ${secondIntegerFromOneToHundred}`
     );
-    const userAnswer = readlineSync.question('Your answer: ');
 
-    if (Number(userAnswer) === correctAnswer) {
+    const userAnswer = Number(readlineSync.question('Your answer: '));
+
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
       counter += 1;
     }
-    if (Number(userAnswer) !== correctAnswer) {
-      console.log(
-        `'${userAnswer}'`
-          + `is wrong answer ;(. Correct answer was '${correctAnswer}'`,
-      );
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-  }
-  if (counter === answersToWin) {
-    console.log(`Congratulations, ${name}!`);
+
+    const youAreWinnig = handleWinOrLose(
+      correctAnswer,
+      userAnswer,
+      name,
+      counter,
+      answersToWin
+    );
+
+    if (!youAreWinnig) return;
   }
 };
 

@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import randomInteger from '../randomInteger.js';
 import greetAndDescribe from '../greetAndDescribe.js';
+import handleWinOrLose from '../handleWinOrLose.js';
 
 const calculations = () => {
   const gameDescripton = 'What is the result of the expression?';
@@ -25,10 +26,10 @@ const calculations = () => {
     const secondIntegerFromOneToHundred = randomInteger(1, 100);
 
     console.log(
-      `Question: ${integerFromOneToHundred} ${operator} ${secondIntegerFromOneToHundred}`,
+      `Question: ${integerFromOneToHundred} ${operator} ${secondIntegerFromOneToHundred}`
     );
 
-    const answer = readlineSync.question('Your answer: ');
+    const userAnswer = Number(readlineSync.question('Your answer: '));
 
     let correctAnswer;
 
@@ -42,22 +43,20 @@ const calculations = () => {
       correctAnswer = integerFromOneToHundred + secondIntegerFromOneToHundred;
     }
 
-    if (correctAnswer === Number(answer)) {
+    if (correctAnswer === userAnswer) {
       console.log('Correct!');
       counter += 1;
     }
-    if (correctAnswer !== Number(answer)) {
-      console.log(
-        `'${answer}'`
-          + ' is wrong answer ;(. Correct answer was '
-          + `'${correctAnswer}'.`,
-      );
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-    if (counter === answersToWin) {
-      console.log(`Congratulations, ${name}!`);
-    }
+  
+    const youAreWinnig = handleWinOrLose(
+      correctAnswer,
+      userAnswer,
+      name,
+      counter,
+      answersToWin
+    );
+
+    if (!youAreWinnig) return;
   }
 };
 
