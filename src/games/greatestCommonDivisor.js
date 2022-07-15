@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import randomInteger from '../randomInteger.js';
 import greetAndDescribe from '../greetAndDescribe.js';
 import handleWinOrLose from '../handleWinOrLose.js';
+import askQuestion from '../askQuestion.js';
 
 const greatestCommonDivisor = (numberOne, numberTwo) => {
   let result = numberOne;
@@ -29,11 +30,14 @@ const gcdGame = () => {
       firstRandomInteger,
       secondIntegerFromOneToHundred,
     );
-    console.log(
-      `Question: ${firstRandomInteger} ${secondIntegerFromOneToHundred}`,
-    );
+
+    const question = `Question: ${firstRandomInteger} ${secondIntegerFromOneToHundred}`;
+
+    askQuestion(question);
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
+
+    counter += 1;
 
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
@@ -44,8 +48,6 @@ const gcdGame = () => {
     );
 
     if (!youAreWinnig) return;
-
-    counter += 1;
   }
 };
 

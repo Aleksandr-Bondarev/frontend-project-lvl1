@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import randomInteger from '../randomInteger.js';
 import greetAndDescribe from '../greetAndDescribe.js';
 import handleWinOrLose from '../handleWinOrLose.js';
+import askQuestion from '../askQuestion.js';
 
 const isPrime = (number) => {
   if (number === 1 || number === 2) {
@@ -27,8 +28,13 @@ const isPrimeGame = () => {
     const someInteger = randomInteger(1, 100);
     const correctAnswer = isPrime(someInteger) === true ? 'yes' : 'no';
 
-    console.log(`Question: ${someInteger}`);
+    const question = `Question: ${someInteger}`;
+
+    askQuestion(question);
+
     const userAnswer = readlineSync.question('Your answer: ');
+
+    counter += 1;
 
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
@@ -39,8 +45,6 @@ const isPrimeGame = () => {
     );
 
     if (!youAreWinnig) return;
-
-    counter += 1;
   }
 };
 

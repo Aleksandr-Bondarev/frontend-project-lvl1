@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import randomInteger from '../randomInteger.js';
 import greetAndDescribe from '../greetAndDescribe.js';
 import handleWinOrLose from '../handleWinOrLose.js';
+import askQuestion from '../askQuestion.js';
 
 const calculations = () => {
   const gameDescripton = 'What is the result of the expression?';
@@ -25,9 +26,9 @@ const calculations = () => {
     const integerFromOneToHundred = randomInteger(1, 100);
     const secondIntegerFromOneToHundred = randomInteger(1, 100);
 
-    console.log(
-      `Question: ${integerFromOneToHundred} ${operator} ${secondIntegerFromOneToHundred}`,
-    );
+    const question = `Question: ${integerFromOneToHundred} ${operator} ${secondIntegerFromOneToHundred}`;
+
+    askQuestion(question);
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
 
@@ -44,6 +45,8 @@ const calculations = () => {
         correctAnswer = integerFromOneToHundred + secondIntegerFromOneToHundred;
     }
 
+    counter += 1;
+
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
@@ -53,8 +56,6 @@ const calculations = () => {
     );
 
     if (!youAreWinnig) return;
-
-    counter += 1;
   }
 };
 

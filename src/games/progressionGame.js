@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import randomInteger from '../randomInteger.js';
 import greetAndDescribe from '../greetAndDescribe.js';
 import handleWinOrLose from '../handleWinOrLose.js';
+import askQuestion from '../askQuestion.js';
 
 const progressionGame = () => {
   const gameDescripton = 'What number is missing in the progression?';
@@ -25,11 +26,13 @@ const progressionGame = () => {
     const correctAnswer = coll[indexOfMissedInteger];
     coll[indexOfMissedInteger] = '..';
 
-    console.log(
-      `Question: ${coll.join(' ')}`,
-    );
+    const question = `Question: ${coll.join(' ')}`;
+
+    askQuestion(question);
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
+
+    counter += 1;
 
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
@@ -40,8 +43,6 @@ const progressionGame = () => {
     );
 
     if (!youAreWinnig) return;
-
-    counter += 1;
   }
 };
 
