@@ -1,40 +1,19 @@
-import readlineSync from 'readline-sync';
-import randomInteger from '../randomInteger.js';
-import greetAndDescribe from '../greetAndDescribe.js';
-import handleWinOrLose from '../handleWinOrLose.js';
-import askQuestion from '../askQuestion.js';
+import randomInteger from '../utils/randomInteger.js';
 
 const isEvenGame = () => {
   const gameDescripton = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const name = greetAndDescribe(gameDescripton);
+  const integerFromOneToHundred = randomInteger(1, 100);
 
-  let counter = 0;
-  const answersToWin = 3;
+  const question = `Question: ${integerFromOneToHundred}`;
 
-  while (counter < answersToWin) {
-    const integerFromOneToHundred = randomInteger(1, 100);
+  const correctAnswer = integerFromOneToHundred % 2 === 0 ? 'yes' : 'no';
 
-    const question = `Question: ${integerFromOneToHundred}`;
-
-    askQuestion(question);
-
-    const userAnswer = readlineSync.question('Your answer: ');
-
-    const correctAnswer = integerFromOneToHundred % 2 === 0 ? 'yes' : 'no';
-
-    counter += 1;
-
-    const youAreWinnig = handleWinOrLose(
-      correctAnswer,
-      userAnswer,
-      name,
-      counter,
-      answersToWin,
-    );
-
-    if (!youAreWinnig) return;
-  }
+  return {
+    gameDescripton,
+    question,
+    correctAnswer,
+  };
 };
 
 export default isEvenGame;
