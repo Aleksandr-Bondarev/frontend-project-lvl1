@@ -16,7 +16,7 @@ const gameRunner = (game) => {
     askQuestion(question);
 
     let userAnswer = readlineSync.question('Your answer: ');
-    userAnswer = isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer);
+    userAnswer = Number.isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer);
 
     counter += 1;
 
@@ -25,7 +25,7 @@ const gameRunner = (game) => {
       userAnswer,
       name,
       counter,
-      answersToWin
+      answersToWin,
     );
 
     if (!youAreWinnig) return;
