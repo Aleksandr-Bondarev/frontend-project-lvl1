@@ -19,11 +19,6 @@ const isEvenGame = () => {
 
     const correctAnswer = integerFromOneToHundred % 2 === 0 ? 'yes' : 'no';
 
-    if (correctAnswer === userAnswer) {
-      console.log('Correct!');
-      counter += 1;
-    }
-
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
@@ -33,6 +28,8 @@ const isEvenGame = () => {
     );
 
     if (!youAreWinnig) return;
+
+    counter += 1;
   }
 };
 

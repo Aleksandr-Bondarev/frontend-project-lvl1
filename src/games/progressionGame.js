@@ -31,11 +31,6 @@ const progressionGame = () => {
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
 
-    if (correctAnswer === Number(userAnswer)) {
-      console.log('Correct!');
-      counter += 1;
-    }
-
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
@@ -45,6 +40,8 @@ const progressionGame = () => {
     );
 
     if (!youAreWinnig) return;
+
+    counter += 1;
   }
 };
 

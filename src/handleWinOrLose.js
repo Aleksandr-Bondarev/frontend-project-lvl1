@@ -16,6 +16,8 @@ const handleWinOrLose = (
   }
   if (answersCount === answersToWin) {
     console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log('Correct!');
   }
   return true;
 };

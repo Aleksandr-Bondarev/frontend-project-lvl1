@@ -35,11 +35,6 @@ const gcdGame = () => {
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      counter += 1;
-    }
-
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
@@ -49,6 +44,8 @@ const gcdGame = () => {
     );
 
     if (!youAreWinnig) return;
+
+    counter += 1;
   }
 };
 

@@ -44,11 +44,6 @@ const calculations = () => {
         correctAnswer = integerFromOneToHundred + secondIntegerFromOneToHundred;
     }
 
-    if (correctAnswer === userAnswer) {
-      console.log('Correct!');
-      counter += 1;
-    }
-
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
@@ -58,6 +53,8 @@ const calculations = () => {
     );
 
     if (!youAreWinnig) return;
+
+    counter += 1;
   }
 };
 

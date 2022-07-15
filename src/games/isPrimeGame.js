@@ -30,11 +30,6 @@ const isPrimeGame = () => {
     console.log(`Question: ${someInteger}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      counter += 1;
-    }
-
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
@@ -44,6 +39,8 @@ const isPrimeGame = () => {
     );
 
     if (!youAreWinnig) return;
+
+    counter += 1;
   }
 };
 
