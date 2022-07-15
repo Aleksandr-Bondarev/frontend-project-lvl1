@@ -1,8 +1,4 @@
-import readlineSync from 'readline-sync';
-import randomInteger from '../randomInteger.js';
-import greetAndDescribe from '../greetAndDescribe.js';
-import handleWinOrLose from '../handleWinOrLose.js';
-import askQuestion from '../askQuestion.js';
+import randomInteger from '../utils/randomInteger.js';
 
 const isPrime = (number) => {
   if (number === 1 || number === 2) {
@@ -19,33 +15,16 @@ const isPrime = (number) => {
 const isPrimeGame = () => {
   const gameDescripton = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const name = greetAndDescribe(gameDescripton);
+  const someInteger = randomInteger(1, 100);
+  const correctAnswer = isPrime(someInteger) === true ? 'yes' : 'no';
 
-  const answersToWin = 3;
-  let counter = 0;
+  const question = `Question: ${someInteger}`;
 
-  while (counter < answersToWin) {
-    const someInteger = randomInteger(1, 100);
-    const correctAnswer = isPrime(someInteger) === true ? 'yes' : 'no';
-
-    const question = `Question: ${someInteger}`;
-
-    askQuestion(question);
-
-    const userAnswer = readlineSync.question('Your answer: ');
-
-    counter += 1;
-
-    const youAreWinnig = handleWinOrLose(
-      correctAnswer,
-      userAnswer,
-      name,
-      counter,
-      answersToWin,
-    );
-
-    if (!youAreWinnig) return;
-  }
+  return {
+    gameDescripton,
+    question,
+    correctAnswer,
+  };
 };
 
 export default isPrimeGame;
