@@ -1,18 +1,26 @@
 import randomInteger from '../utils/randomInteger.js';
 
-const isEvenGame = () => {
+const isEvenGame = (rounds) => {
   const gameDescripton = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const integerFromOneToHundred = randomInteger(1, 100);
+  const questionsAndAnswers = [];
 
-  const question = `Question: ${integerFromOneToHundred}`;
+  while (questionsAndAnswers.length < rounds) {
+    const integerFromOneToHundred = randomInteger(1, 100);
 
-  const correctAnswer = integerFromOneToHundred % 2 === 0 ? 'yes' : 'no';
+    const question = `Question: ${integerFromOneToHundred}`;
+
+    const correctAnswer = integerFromOneToHundred % 2 === 0 ? 'yes' : 'no';
+
+    questionsAndAnswers.push({
+      question,
+      correctAnswer,
+    });
+  }
 
   return {
     gameDescripton,
-    question,
-    correctAnswer,
+    questionsAndAnswers,
   };
 };
 

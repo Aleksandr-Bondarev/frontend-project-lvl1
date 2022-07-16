@@ -46,7 +46,10 @@ const gameRunner = (game) => {
   let name;
 
   while (counter < answersToWin) {
-    const { gameDescripton, question, correctAnswer } = game();
+    const { gameDescripton, questionsAndAnswers } = game(answersToWin);
+
+    const { question } = questionsAndAnswers[counter];
+    const { correctAnswer } = questionsAndAnswers[counter];
 
     if (counter === 0) name = greetAndDescribe(gameDescripton);
 
