@@ -1,7 +1,44 @@
 import readlineSync from 'readline-sync';
-import greetAndDescribe from './utils/greetAndDescribe.js';
-import askQuestion from './utils/askQuestion.js';
-import handleWinOrLose from './utils/handleWinOrLose.js';
+
+const askQuestion = (question) => {
+  console.log(question);
+};
+
+const greetAndDescribe = (gameDescripton = false) => {
+  console.log('Welcome to the Brain Games!');
+
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+
+  if (gameDescripton) console.log(gameDescripton);
+
+  return name;
+};
+
+const handleWinOrLose = (
+  correctAnswer,
+  userAnswer,
+  userName,
+  answersCount,
+  answersToWin,
+) => {
+  if (correctAnswer !== userAnswer) {
+    console.log(
+      `'${userAnswer}'`
+        + ' is wrong answer ;(. Correct answer was '
+        + `'${correctAnswer}'.`,
+    );
+    console.log(`Let's try again, ${userName}!`);
+    return false;
+  }
+  if (answersCount === answersToWin) {
+    console.log(`Congratulations, ${userName}!`);
+    return true;
+  }
+  console.log('Correct!');
+
+  return true;
+};
 
 const gameRunner = (game) => {
   let counter = 0;
@@ -33,3 +70,5 @@ const gameRunner = (game) => {
 };
 
 export default gameRunner;
+
+export { greetAndDescribe };

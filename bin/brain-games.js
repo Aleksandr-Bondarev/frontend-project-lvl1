@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import greetAndDescribe from '../src/utils/greetAndDescribe.js';
+import { greetAndDescribe } from '../src/index.js';
 
 greetAndDescribe();
