@@ -11,13 +11,7 @@ const greetAndDescribe = (gameDescripton = false) => {
   return name;
 };
 
-const handleWinOrLose = (
-  correctAnswer,
-  userAnswer,
-  userName,
-  answersCount,
-  answersToWin,
-) => {
+const handleWrongAnswer = (userAnswer, correctAnswer, userName) => {
   if (correctAnswer !== userAnswer) {
     console.log(
       `'${userAnswer}'`
@@ -25,15 +19,14 @@ const handleWinOrLose = (
         + `'${correctAnswer}'.`,
     );
     console.log(`Let's try again, ${userName}!`);
-    return false;
   }
+};
+
+const handleCorrectAnswer = (answersCount, answersToWin, userName) => {
+  console.log('Correct!');
   if (answersCount === answersToWin) {
     console.log(`Congratulations, ${userName}!`);
-    return true;
   }
-  console.log('Correct!');
-
-  return true;
 };
 
 const gameRunner = (game) => {
@@ -51,15 +44,12 @@ const gameRunner = (game) => {
     let userAnswer = readlineSync.question('Your answer: ');
     userAnswer = Number.isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer);
 
-    const youAreWinnig = handleWinOrLose(
-      correctAnswer,
-      userAnswer,
-      name,
-      answersCount,
-      answersToWin,
-    );
+    if (userAnswer !== correctAnswer) {
+      handleWrongAnswer(userAnswer, correctAnswer, name);
+      return;
+    }
 
-    if (!youAreWinnig) return;
+    handleCorrectAnswer(answersCount, answersToWin, name);
   }
 };
 
