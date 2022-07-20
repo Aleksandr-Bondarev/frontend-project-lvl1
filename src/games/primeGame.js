@@ -12,7 +12,7 @@ const isPrime = (number) => {
   return divisor === 1;
 };
 
-const isPrimeGame = (rounds) => {
+const primeGame = (rounds) => {
   const gameDescripton = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const questionsAndAnswers = [];
 
@@ -34,4 +34,4 @@ const isPrimeGame = (rounds) => {
   };
 };
 
-export default isPrimeGame;
+export default primeGame;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import isPrimeGame from '../src/games/isPrimeGame.js';
+import primeGame from '../src/games/primeGame.js';
 import gameRunner from '../src/index.js';
 
-gameRunner(isPrimeGame);
+gameRunner(primeGame);
