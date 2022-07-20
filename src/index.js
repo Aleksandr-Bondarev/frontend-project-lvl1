@@ -1,9 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const askQuestion = (question) => {
-  console.log(question);
-};
-
 const greetAndDescribe = (gameDescripton = false) => {
   console.log('Welcome to the Brain Games!');
 
@@ -41,30 +37,25 @@ const handleWinOrLose = (
 };
 
 const gameRunner = (game) => {
-  let counter = 0;
   const answersToWin = 3;
-  let name;
+  const { gameDescripton, questionsAndAnswers } = game(answersToWin);
+  const name = greetAndDescribe(gameDescripton);
 
-  while (counter < answersToWin) {
-    const { gameDescripton, questionsAndAnswers } = game(answersToWin);
+  for (let i = 0; i < questionsAndAnswers.length; i += 1) {
+    const { question } = questionsAndAnswers[i];
+    const { correctAnswer } = questionsAndAnswers[i];
+    const answersCount = i + 1;
 
-    const { question } = questionsAndAnswers[counter];
-    const { correctAnswer } = questionsAndAnswers[counter];
-
-    if (counter === 0) name = greetAndDescribe(gameDescripton);
-
-    askQuestion(question);
+    console.log(question);
 
     let userAnswer = readlineSync.question('Your answer: ');
     userAnswer = Number.isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer);
-
-    counter += 1;
 
     const youAreWinnig = handleWinOrLose(
       correctAnswer,
       userAnswer,
       name,
-      counter,
+      answersCount,
       answersToWin,
     );
 
