@@ -11,26 +11,31 @@ const greatestCommonDivisor = (numberOne, numberTwo) => {
   return result;
 };
 
-const gcdGame = (rounds) => {
-  const gameDescripton = 'Find the greatest common divisor of given numbers.';
+const gameDescripton = 'Find the greatest common divisor of given numbers.';
 
+const generateRound = () => {
+  const firstRandomInteger = randomInteger(1, 100);
+  const secondIntegerFromOneToHundred = randomInteger(1, 100);
+
+  const correctAnswer = greatestCommonDivisor(
+    firstRandomInteger,
+    secondIntegerFromOneToHundred,
+  );
+
+  const question = `${firstRandomInteger} ${secondIntegerFromOneToHundred}`;
+
+  return {
+    question,
+    correctAnswer,
+  };
+};
+
+const gcdGame = (rounds) => {
   const questionsAndAnswers = [];
 
   while (questionsAndAnswers.length < rounds) {
-    const firstRandomInteger = randomInteger(1, 100);
-    const secondIntegerFromOneToHundred = randomInteger(1, 100);
-
-    const correctAnswer = greatestCommonDivisor(
-      firstRandomInteger,
-      secondIntegerFromOneToHundred,
-    );
-
-    const question = `Question: ${firstRandomInteger} ${secondIntegerFromOneToHundred}`;
-
-    questionsAndAnswers.push({
-      question,
-      correctAnswer,
-    });
+    const round = generateRound();
+    questionsAndAnswers.push(round);
   }
 
   return {

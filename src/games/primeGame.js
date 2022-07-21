@@ -12,20 +12,26 @@ const isPrime = (number) => {
   return divisor === 1;
 };
 
+const gameDescripton = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const generateRound = () => {
+  const someInteger = randomInteger(1, 100);
+
+  const correctAnswer = isPrime(someInteger) === true ? 'yes' : 'no';
+  const question = `${someInteger}`;
+
+  return {
+    question,
+    correctAnswer,
+  };
+};
+
 const primeGame = (rounds) => {
-  const gameDescripton = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const questionsAndAnswers = [];
 
   while (questionsAndAnswers.length < rounds) {
-    const someInteger = randomInteger(1, 100);
-
-    const correctAnswer = isPrime(someInteger) === true ? 'yes' : 'no';
-    const question = `Question: ${someInteger}`;
-
-    questionsAndAnswers.push({
-      question,
-      correctAnswer,
-    });
+    const round = generateRound();
+    questionsAndAnswers.push(round);
   }
 
   return {

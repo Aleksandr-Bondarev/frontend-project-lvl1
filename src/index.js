@@ -30,7 +30,7 @@ const gameRunner = (game) => {
     const { correctAnswer } = questionsAndAnswers[i];
     const answersCount = i + 1;
 
-    console.log(question);
+    console.log(`Question: ${question}`);
 
     let userAnswer = readlineSync.question('Your answer: ');
     userAnswer = Number.isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer);
