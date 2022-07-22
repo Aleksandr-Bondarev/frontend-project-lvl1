@@ -1,4 +1,5 @@
 import randomInteger from '../utils/randomInteger.js';
+import { gameRounds } from '../index.js';
 
 const gameDescripton = 'What number is missing in the progression?';
 
@@ -13,7 +14,7 @@ const generateRound = () => {
     const newElement = coll[coll.length - 1] + progressionStep;
     coll.push(newElement);
   }
-  const correctAnswer = coll[indexOfMissedInteger];
+  const correctAnswer = String(coll[indexOfMissedInteger]);
   coll[indexOfMissedInteger] = '..';
 
   const question = `${coll.join(' ')}`;
@@ -38,4 +39,6 @@ const progressionGame = (rounds) => {
   };
 };
 
-export default progressionGame;
+const progressionGameData = progressionGame(gameRounds);
+
+export default progressionGameData;

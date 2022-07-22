@@ -1,4 +1,5 @@
 import randomInteger from '../utils/randomInteger.js';
+import { gameRounds } from '../index.js';
 
 const gameDescripton = 'What is the result of the expression?';
 
@@ -31,6 +32,8 @@ const generateRound = () => {
       correctAnswer = integerFromOneToHundred + secondIntegerFromOneToHundred;
   }
 
+  correctAnswer = String(correctAnswer);
+
   return {
     question,
     correctAnswer,
@@ -51,4 +54,6 @@ const calculations = (rounds) => {
   });
 };
 
-export default calculations;
+const calculationsGameData = calculations(gameRounds);
+
+export default calculationsGameData;

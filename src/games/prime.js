@@ -1,4 +1,5 @@
 import randomInteger from '../utils/randomInteger.js';
+import { gameRounds } from '../index.js';
 
 const isPrime = (number) => {
   if (number === 1 || number === 2) {
@@ -40,4 +41,6 @@ const primeGame = (rounds) => {
   };
 };
 
-export default primeGame;
+const primeGameData = primeGame(gameRounds);
+
+export default primeGameData;

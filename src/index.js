@@ -1,47 +1,39 @@
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
 
-const handleWrongAnswer = (userAnswer, correctAnswer, userName) => {
-  if (correctAnswer !== userAnswer) {
-    console.log(
-      `'${userAnswer}'`
-        + ' is wrong answer ;(. Correct answer was '
-        + `'${correctAnswer}'.`,
-    );
-    console.log(`Let's try again, ${userName}!`);
-  }
+const gameRounds = 3;
+
+const greeting = () => {
+  console.log('Welcome to the Brain Games!');
+
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+
+  return name;
 };
 
-const handleCorrectAnswer = (answersCount, answersToWin, userName) => {
-  console.log('Correct!');
-  if (answersCount === answersToWin) {
-    console.log(`Congratulations, ${userName}!`);
-  }
-};
-
-const gameRunner = (game) => {
-  const answersToWin = 3;
-  const { gameDescripton, questionsAndAnswers } = game(answersToWin);
+const gameRunner = ({ gameDescripton, questionsAndAnswers }) => {
   const name = greeting(gameDescripton);
   console.log(gameDescripton);
 
-  for (let i = 0; i < questionsAndAnswers.length; i += 1) {
-    const { question } = questionsAndAnswers[i];
-    const { correctAnswer } = questionsAndAnswers[i];
-    const answersCount = i + 1;
-
+  /* eslint-disable-next-line */
+  for (const { question, correctAnswer } of questionsAndAnswers) {
     console.log(`Question: ${question}`);
 
-    let userAnswer = readlineSync.question('Your answer: ');
-    userAnswer = Number.isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer);
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {
-      handleWrongAnswer(userAnswer, correctAnswer, name);
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+      );
+      console.log(`Let's try again, ${name}!`);
       return;
     }
 
-    handleCorrectAnswer(answersCount, answersToWin, name);
+    console.log('Correct!');
   }
+
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default gameRunner;
+export { gameRounds };

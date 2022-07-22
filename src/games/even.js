@@ -1,4 +1,5 @@
 import randomInteger from '../utils/randomInteger.js';
+import { gameRounds } from '../index.js';
 
 const gameDescripton = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -28,4 +29,6 @@ const evenGame = (rounds) => {
   };
 };
 
-export default evenGame;
+const evenGameData = evenGame(gameRounds);
+
+export default evenGameData;

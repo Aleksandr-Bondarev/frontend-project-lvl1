@@ -1,14 +1,15 @@
 import randomInteger from '../utils/randomInteger.js';
+import { gameRounds } from '../index.js';
 
 const greatestCommonDivisor = (numberOne, numberTwo) => {
   let result = numberOne;
   while (result > 0) {
     if (numberOne % result === 0 && numberTwo % result === 0) {
-      return result;
+      return String(result);
     }
     result -= 1;
   }
-  return result;
+  return String(result);
 };
 
 const gameDescripton = 'Find the greatest common divisor of given numbers.';
@@ -44,4 +45,6 @@ const gcdGame = (rounds) => {
   };
 };
 
-export default gcdGame;
+const gcdGameData = gcdGame(gameRounds);
+
+export default gcdGameData;
