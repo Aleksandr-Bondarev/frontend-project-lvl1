@@ -12,7 +12,7 @@ const greeting = () => {
 };
 
 const gameRunner = ({ gameDescripton, questionsAndAnswers }) => {
-  const name = greeting(gameDescripton);
+  const name = greeting();
   console.log(gameDescripton);
 
   /* eslint-disable-next-line */
