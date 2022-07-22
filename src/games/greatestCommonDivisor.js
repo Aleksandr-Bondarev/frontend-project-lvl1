@@ -5,11 +5,11 @@ const greatestCommonDivisor = (numberOne, numberTwo) => {
   let result = numberOne;
   while (result > 0) {
     if (numberOne % result === 0 && numberTwo % result === 0) {
-      return String(result);
+      return result;
     }
     result -= 1;
   }
-  return String(result);
+  return result;
 };
 
 const gameDescripton = 'Find the greatest common divisor of given numbers.';
@@ -18,10 +18,10 @@ const generateRound = () => {
   const firstRandomInteger = randomInteger(1, 100);
   const secondIntegerFromOneToHundred = randomInteger(1, 100);
 
-  const correctAnswer = greatestCommonDivisor(
+  const correctAnswer = String(greatestCommonDivisor(
     firstRandomInteger,
     secondIntegerFromOneToHundred,
-  );
+  ));
 
   const question = `${firstRandomInteger} ${secondIntegerFromOneToHundred}`;
 
